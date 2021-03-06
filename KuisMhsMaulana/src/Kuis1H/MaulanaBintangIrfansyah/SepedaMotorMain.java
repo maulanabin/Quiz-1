@@ -1,6 +1,7 @@
 package Kuis1H.MaulanaBintangIrfansyah;
 import java.util.Scanner;
 
+
 public class SepedaMotorMain {
     static Scanner sc = new Scanner(System.in);
     static SepedaMotor motor1 = new SepedaMotor();
@@ -13,34 +14,6 @@ public class SepedaMotorMain {
         motor2[3] = new SepedaMotor("Suzuki");
         menu();
     }
-
-    static void menu() {
-        System.out.println("Pilih Sepeda Motor");
-        for (int i = 0; i < motor2.length; i++) {
-            System.out.println((i + 1) + " " + motor2[i].merk);
-        }
-
-        System.out.print("Pilihan nomor 1 - 4: ");
-        int option = sc.nextInt();
-
-        switch (option) {
-            case 1:
-                spd(motor2[0].merk);
-                break;
-            case 2:
-                spd(motor2[1].merk);
-                break;
-            case 3:
-                spd(motor2[2].merk);
-                break;
-            case 4:
-                spd(motor2[3].merk);
-                break;
-            default:
-                System.out.println("Pilihan salah!");
-        }
-    }
-
     static void spd(String motor) {
         System.out.println("Pilihan nomor: " + motor);
         if (!motor1.kontakMotor) {
@@ -51,7 +24,7 @@ public class SepedaMotorMain {
             System.out.println("2. Tambah Kecepatan Motor");
             System.out.println("3. Kurangi Kecepatan Motor");
         }
-        System.out.print("🌸 ");
+        System.out.print("o> ");
         int motor3 = sc.nextInt();
         if (motor3 == 0) {
             motor1.matikanMotor(true);
@@ -73,6 +46,32 @@ public class SepedaMotorMain {
             menu();
         } else {
             spd(motor);
+        }
+    }
+    static void menu() {
+        System.out.println("Pilih Sepeda Motor");
+        for (int i = 0; i < motor2.length; i++) {
+            System.out.println((i + 1) + " " + motor2[i].merk);
+        }
+
+        System.out.print("[1-4]: ");
+        int option = sc.nextInt();
+
+        switch (option) {
+            case 1:
+                spd(motor2[0].merk);
+                break;
+            case 2:
+                spd(motor2[1].merk);
+                break;
+            case 3:
+                spd(motor2[2].merk);
+                break;
+            case 4:
+                spd(motor2[3].merk);
+                break;
+            default:
+                System.out.println("Pilihan salah!");
         }
     }
 }
