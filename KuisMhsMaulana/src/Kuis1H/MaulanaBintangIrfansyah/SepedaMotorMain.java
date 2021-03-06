@@ -20,7 +20,7 @@ public class SepedaMotorMain {
             System.out.println((i + 1) + " " + motor2[i].merk);
         }
 
-        System.out.print("[1-4]: ");
+        System.out.print("Pilihan nomor 1 - 4: ");
         int option = sc.nextInt();
 
         switch (option) {
@@ -51,7 +51,7 @@ public class SepedaMotorMain {
             System.out.println("2. Tambah Kecepatan Motor");
             System.out.println("3. Kurangi Kecepatan Motor");
         }
-        System.out.print("o> ");
+        System.out.print("🌸 ");
         int motor3 = sc.nextInt();
         if (motor3 == 0) {
             motor1.matikanMotor(true);
