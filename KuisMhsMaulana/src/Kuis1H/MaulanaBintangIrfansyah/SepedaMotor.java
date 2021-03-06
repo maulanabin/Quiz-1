@@ -37,7 +37,7 @@ public class SepedaMotor {
     }
 
     void info(){
-        System.out.println("--------------------------------");
+        System.out.println("🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 ");
         if(kecepatanMotor <= 0){
             if(kontakMotor == true){
                 System.out.println("Sepeda motor hidup");
@@ -48,6 +48,6 @@ public class SepedaMotor {
         }else{
             System.out.println("Kecepatan\t: " + kecepatanMotor);
         }
-        System.out.println("--------------------------------");
+        System.out.println("🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 ");
     }
 }
