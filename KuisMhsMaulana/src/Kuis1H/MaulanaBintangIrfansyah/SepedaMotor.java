@@ -9,34 +9,34 @@ public class SepedaMotor {
 
     }
 
-    SepedaMotor(String merk){
+    SepedaMotor(String merk) {
         this.merk = merk;
     }
-    public void nyalakanMotor(boolean speed){
+    public void nyalakanMotor(boolean speed) {
         this.kontakMotor = speed;
     }
 
-    public void matikanMotor(boolean speed){
+    public void matikanMotor(boolean speed) {
         this.kontakMotor = speed;
     }
-    public void tambahKecepatanMotor(int kec){
+    public void tambahKecepatanMotor(int kec) {
         if(kecepatanMotor >= 100){
             System.out.println("Maksimal kecepatan: 100 km/jam");
         }else{
             this.kecepatanMotor += kec;
         }
     }
-    public void kurangiKecepatanMotor(int kec){
+    public void kurangiKecepatanMotor(int kec) {
         if(kecepatanMotor <= 0){
             System.out.println("Minimal kecepatan: 0 km/jam");
         }else{
             this.kecepatanMotor -= kec;
         }
     }
-    public void info(){
+    public void info() {
         System.out.println("🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 ");
-        if(kecepatanMotor <= 0){
-            if(kontakMotor == true){
+        if(kecepatanMotor <= 0) {
+            if(kontakMotor == true) { 
                 System.out.println("Sepeda motor hidup");
             }else{
                 System.out.println("Sepeda motor mati");
