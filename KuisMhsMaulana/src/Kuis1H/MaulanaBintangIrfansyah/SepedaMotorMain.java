@@ -7,10 +7,10 @@ public class SepedaMotorMain {
     static SepedaMotor[] motor2 = new SepedaMotor[4];
 
     public static void main(String[] args) {
-        motor2[0] = new SepedaMotor("HONDA");
-        motor2[1] = new SepedaMotor("YAMAHA");
-        motor2[2] = new SepedaMotor("DUCATI");
-        motor2[3] = new SepedaMotor("SUZUKI");
+        motor2[0] = new SepedaMotor("Honda");
+        motor2[1] = new SepedaMotor("Yamaha");
+        motor2[2] = new SepedaMotor("Ducati");
+        motor2[3] = new SepedaMotor("Suzuki");
         menu();
     }
 
@@ -20,7 +20,7 @@ public class SepedaMotorMain {
             System.out.println((i + 1) + " " + motor2[i].merk);
         }
 
-        System.out.print("[1-4] o> ");
+        System.out.print("[1-4]: ");
         int option = sc.nextInt();
 
         switch (option) {
@@ -37,39 +37,39 @@ public class SepedaMotorMain {
                 spd(motor2[3].merk);
                 break;
             default:
-                System.out.println("Tidak ada pilihan");
+                System.out.println("Pilihan salah!");
         }
     }
 
     static void spd(String motor) {
-        System.out.println("OPSI SEPEDA MOTOR " + motor);
-        if (motor1.kontakMotor == false) {
+        System.out.println("Pilihan nomor: " + motor);
+        if (!motor1.kontakMotor) {
             System.out.println("0. Hidupkan motor");
             System.out.println("4. Menu Awal");
-        } else if (motor1.kontakMotor == true) {
+        } else if (motor1.kontakMotor) {
             System.out.println("1. Matikan Motor");
             System.out.println("2. Tambah Kecepatan Motor");
             System.out.println("3. Kurangi Kecepatan Motor");
         }
         System.out.print("o> ");
-        int opMtr = sc.nextInt();
-        if (opMtr == 0) {
+        int motor3 = sc.nextInt();
+        if (motor3 == 0) {
             motor1.matikanMotor(true);
             motor1.info();
             spd(motor);
-        } else if (opMtr == 1) {
+        } else if (motor3 == 1) {
             motor1.matikanMotor(false);
             motor1.info();
             spd(motor);
-        } else if (opMtr == 2) {
+        } else if (motor3 == 2) {
             motor1.tambahKecepatanMotor(5);
             motor1.info();
             spd(motor);
-        } else if (opMtr == 3) {
+        } else if (motor3 == 3) {
             motor1.kurangiKecepatanMotor(5);
             motor1.info();
             spd(motor);
-        } else if (opMtr == 4) {
+        } else if (motor3 == 4) {
             menu();
         } else {
             spd(motor);
